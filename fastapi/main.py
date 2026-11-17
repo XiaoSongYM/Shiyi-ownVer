@@ -17,8 +17,14 @@ class User(BaseModel):
     # 设置初始值
     name: str = "I"
     age: int = 18
+    email: str = "example@example.com"
 
 # POST 方法接收
 @app.post("/say")
 def say(userinput: User):
     return {"message":f"You R {userinput.name} aged {userinput.age}"}
+
+@app.post("/register")
+def register(userinput: User):
+    a=1
+    # 待
